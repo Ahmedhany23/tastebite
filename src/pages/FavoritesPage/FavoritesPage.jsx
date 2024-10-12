@@ -2,10 +2,11 @@ import { useContext } from "react";
 import { FavoritesContext } from "../../context/FavoritesContext";
 import ProductCard from "../../components/Products/ProductCard";
 import Button from "../../components/utility/Button";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function FavoritesPage() {
   const { favorites } = useContext(FavoritesContext);
+  const navigate = useNavigate();
   return (
     <main className="container mx-auto py-[120px]">
       {favorites.length > 0 ? (
@@ -19,7 +20,7 @@ export default function FavoritesPage() {
       ) : (
         <div className="flex flex-col gap-10 justify-center items-center">
           <p className="text-center text-3xl"> No Favorites Recipes</p>
-          <Button><Link to='/'>Go To HomePage</Link></Button>
+          <Button onClick={()=>navigate('/')}>Go To HomePage</Button>
         </div>
       )}
     </main>
