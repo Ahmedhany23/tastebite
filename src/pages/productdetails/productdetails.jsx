@@ -43,9 +43,9 @@ const ProductDetails = () => {
       <main className="container mx-auto py-[100px] w-full">
         <div
           role="status"
-          className=" animate-pulse flex flex-col sm:flex-row justify-center items-center gap-10 place-content-center text-center "
+          className=" animate-pulse flex flex-col sm:flex-row justify-center items-center gap-10 text-center "
         >
-          <div className="flex items-center justify-center w-fit h-48 bg-gray-300 rounded sm:w-[300px]">
+          <div className="flex items-center justify-center w-[300px] h-[250px] bg-gray-300 rounded sm:w-[300px]">
             <svg
               className="w-10 h-10 text-gray-200"
               aria-hidden="true"
